@@ -31,7 +31,9 @@ bash nexphisher
 ```
 <br>
 <p align="center">
-![img](https://raw.githubusercontent.com/htr-tech/release-download/master/images/nexphisher1.png)<br>
+
+![img](https://raw.githubusercontent.com/htr-tech/release-download/master/images/nexphisher1.png) <br>
+
 ![ing](https://raw.githubusercontent.com/htr-tech/release-download/master/images/nexphisher2.png)
 
 # Features :
