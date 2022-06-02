@@ -1,18 +1,21 @@
 ---
 layout: post
-title: Free Unlimited Google Drive Storage
-subtitle: 
+title: Create Multiple Gmail Accounts With 1 GMAIL
+subtitle: Unlimied Gmail Accounts!
 categories:
 - methods
-- Google-Drive
-- free
-tags: [Google Drive, GD ,methods, Drive, Storage]
+- gmail
+- unlimited
+tags: [Gmail,methods]
 ---
-> Method for Google Drive STORAGE 
+### Unlimited Gmail Accounts!
 
-1. go to [https://td.fastio.me/](https://td.fastio.me/) <br>
-2. Write a random storage name <br>
-3. Write your google mail adress <br>
-4. Select a random CH<br>
+#### Use them for FREE Unlimited Trials on many programmes!
 
->>>> ENJOY <<<<
+1)At first You Must have Just 1 Gmail Account <br>
+2)Then go to the site [Click here](https://thebot.net/api/gmail/) and put that account name here (without @gmail.com)
+<br>3)Just press "Generate" and you will get Thousands of FREE ACCOUNTS.<br>
+4)They are all Connected with your first account so YOU JUST USE THE NORMAL MAIL INBOX FOR ALL THE ACCOUNTS!!!
+
+So if I send a mail to any of these accounts you just check it on the inbox of the first account.<br>
+If you wanna access to youtube, drive,ecc just use the first (the original) accounts
