@@ -30,21 +30,24 @@ bash nexphisher
 ```
 <br>
 <p align="center">
-<img width="50%" src="https://raw.githubusercontent.com/htr-tech/release-download/master/images/nexphisher1.png"/><br>
-<img width="46%" src="https://raw.githubusercontent.com/htr-tech/release-download/master/images/nexphisher2.png"/>
+<img width="75%" src="https://raw.githubusercontent.com/htr-tech/release-download/master/images/nexphisher1.png"/><br>
+<img width="75%" src="https://raw.githubusercontent.com/htr-tech/release-download/master/images/nexphisher2.png"/>
 
 ## Features :
+
  [+] Latest Login Pages !<br>
  [+] 5 Port Forwarding Options !<br>
  [+] Easy for Beginners !<br>
 
 ## Credits :
+
 Zphisher (https://github.com/htr-tech/zphisher)<br>
 The Linux Choice (https://github.com/thelinuxchoice)<br>
 DarkSecDevelopers (https://github.com/DarkSecDevelopers)<br>
 Undeadsec (https://github.com/Undeadsec)<br>
 
 ## Tunelling Options :
+
 Localhost (127.0.0.1)<br>
 NGROK (https://ngrok.com)<br>
 SERVEO (https://serveo.net)<br>
@@ -52,6 +55,7 @@ LOCALHOSTRUN (https://localhost.run)<br>
 LOCALXPOSE (https://localxpose.io/)<br>
 
 ## Find Owner on :
+
 [![Github](https://img.shields.io/badge/Github-HTR--TECH-green?style=for-the-badge&logo=github)](https://github.com/htr-tech)
 [![Instagram](https://img.shields.io/badge/IG-%40tahmid.rayat-red?style=for-the-badge&logo=instagram)](https://www.instagram.com/tahmid.rayat)
 [![Messenger](https://img.shields.io/badge/Chat-Messenger-blue?style=for-the-badge&logo=messenger)](https://m.me/tahmid.rayat.official)
