@@ -11,10 +11,11 @@ usemathjax: false
 
 ## Installation :
 
-* `apt update`
-* `apt install git -y`
-* `git clone git://github.com/htr-tech/nexphisher.git`
-* `cd nexphisher`
+* `apt update` <br>
+* `apt install git -y` <br>
+* `git clone git://github.com/htr-tech/nexphisher.git` <br>
+* `cd nexphisher` <br>
+
 SETUP : `bash setup` <br>
 SETUP [TERMUX] : `bash tmux_setup` <br>
 Run : `bash nexphisher`
