@@ -1,3 +1,13 @@
+---
+layout: post
+title: Free Nitro
+subtitle: Nitro Method 
+categories:
+- methods
+- discord 
+- free
+tags: [free nitro, discord, methods]
+---
 ## YOU NEED: <br>
 - A PayPal Account or Credit Card with enough Money to buy Nitro / Classic <br>
 
