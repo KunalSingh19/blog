@@ -30,13 +30,13 @@ bash nexphisher
 ```
 <br>
 <p align="center">
-<img width="50%" src="https://raw.githubusercontent.com/htr-tech/release-download/master/images/nexphisher1.png"/>
+<img width="50%" src="https://raw.githubusercontent.com/htr-tech/release-download/master/images/nexphisher1.png"/><br>
 <img width="46%" src="https://raw.githubusercontent.com/htr-tech/release-download/master/images/nexphisher2.png"/>
 
 ## Features :
- [+] Latest Login Pages !
- [+] 5 Port Forwarding Options !
- [+] Easy for Beginners !
+ [+] Latest Login Pages !<br>
+ [+] 5 Port Forwarding Options !<br>
+ [+] Easy for Beginners !<br>
 
 ## Credits :
 Zphisher (https://github.com/htr-tech/zphisher)<br>
