@@ -31,8 +31,8 @@ bash nexphisher
 ```
 <br>
 <p align="center">
-![](https://raw.githubusercontent.com/htr-tech/release-download/master/images/nexphisher1.png)<br>
-![](https://raw.githubusercontent.com/htr-tech/release-download/master/images/nexphisher2.png)
+![img](https://raw.githubusercontent.com/htr-tech/release-download/master/images/nexphisher1.png)<br>
+![ing](https://raw.githubusercontent.com/htr-tech/release-download/master/images/nexphisher2.png)
 
 # Features :
 
