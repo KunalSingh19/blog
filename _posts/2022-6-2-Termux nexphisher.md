@@ -15,13 +15,18 @@ usemathjax: false
 * `apt install git -y`
 * `git clone git://github.com/htr-tech/nexphisher.git`
 * `cd nexphisher`
-#### > SETUP : `bash setup`
-#### > SETUP [TERMUX] : `bash tmux_setup`
+#### > SETUP : `bash setup` <br>
+#### > SETUP [TERMUX] : `bash tmux_setup` <br>
 #### > Run : `bash nexphisher`
 
-## Single Command :
-```
-apt update ; apt install git -y ; git clone git://github.com/htr-tech/nexphisher.git ; cd nexphisher ; bash setup ; bash nexphisher
+## Installation Commands :
+```bash
+apt update  
+apt install git -y  
+git clone git://github.com/htr-tech/nexphisher.git  
+cd nexphisher 
+bash setup
+bash nexphisher
 ```
 <br>
 <p align="center">
@@ -29,22 +34,22 @@ apt update ; apt install git -y ; git clone git://github.com/htr-tech/nexphisher
 <img width="46%" src="https://raw.githubusercontent.com/htr-tech/release-download/master/images/nexphisher2.png"/>
 
 ## Features :
-#### [+] Latest Login Pages !
-#### [+] 5 Port Forwarding Options !
-#### [+] Easy for Beginners !
+ [+] Latest Login Pages !
+ [+] 5 Port Forwarding Options !
+ [+] Easy for Beginners !
 
 ## Credits :
-#### > Zphisher (https://github.com/htr-tech/zphisher)
-#### > The Linux Choice (https://github.com/thelinuxchoice)
-#### > DarkSecDevelopers (https://github.com/DarkSecDevelopers)
-#### > Undeadsec (https://github.com/Undeadsec)
+Zphisher (https://github.com/htr-tech/zphisher)<br>
+The Linux Choice (https://github.com/thelinuxchoice)<br>
+DarkSecDevelopers (https://github.com/DarkSecDevelopers)<br>
+Undeadsec (https://github.com/Undeadsec)<br>
 
 ## Tunelling Options :
-#### > Localhost (127.0.0.1)
-#### > NGROK (https://ngrok.com)
-#### > SERVEO (https://serveo.net)
-#### > LOCALHOSTRUN (https://localhost.run)
-#### > LOCALXPOSE (https://localxpose.io/)
+Localhost (127.0.0.1)<br>
+NGROK (https://ngrok.com)<br>
+SERVEO (https://serveo.net)<br>
+LOCALHOSTRUN (https://localhost.run)<br>
+LOCALXPOSE (https://localxpose.io/)<br>
 
 ## Find Owner on :
 [![Github](https://img.shields.io/badge/Github-HTR--TECH-green?style=for-the-badge&logo=github)](https://github.com/htr-tech)
