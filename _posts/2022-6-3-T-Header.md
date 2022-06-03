@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Termux T-Header"
+category: Termux
+keywords: termux
+usemathjax: false
+---
 # T-Header script
 This Bash script contains Oh-My-Zsh With, command autosuggestion, syntax highlight plugins and terminal header with own name for TERMUX. 
 ## Preview of after setup completed..
