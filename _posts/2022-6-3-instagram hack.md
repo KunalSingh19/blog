@@ -15,9 +15,7 @@ usemathjax: false
 
 instahack is a bash based script which is officially made to test password strength of instagram account from termux with bruteforce attack and. This tool works on both rooted Android device and Non-rooted Android device.
 
-------
- How?
-------
+## How?
 
 | We use , **tor** to change our ip once blocked for many tries and continue attack.
 | Since the official api is not a hacker wants, So we use the **InstagramAPK signature** to stay **anonymous!**
@@ -25,9 +23,8 @@ instahack is a bash based script which is officially made to test password stren
 
  **See the 'Algorimthm' section down below for more hackery!**
 
--------
- What?
--------
+
+## What?
 
 | **Instahack** is a slick bash script to perform  **brute force** attack against **Instagram** ,   
 | this script can **bypass** login limiting on wrong passwords ,  so basically it can test **infinite number of passwords**.
@@ -35,9 +32,7 @@ instahack is a bash based script which is officially made to test password stren
 | This script mimics the activities of the official **instagram android app** and sends request over **tor** so you are secure ,
 | but if your **tor** installation is **misconfigured** then the blame is on you.
 
-------------
- Features
-------------
+## Features
 
 * instahack Scripting
 
@@ -90,9 +85,9 @@ $ sudo pip3 install stem
  bash instahack.sh
 ```
 
---------------------------------------------------
-    Configuring Tor server to open control port
---------------------------------------------------
+
+###   Configuring Tor server to open control port
+
 
 open your **tor configuration** file usually located at **/etc/tor/torrc**
 
