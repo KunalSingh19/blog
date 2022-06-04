@@ -2,8 +2,17 @@
 title: Expose your LocalHost with this tool
 desc: Expose your LocalHost with this tool
 layout: post
-category: Termux
-keywords: termux
+categories:
+  - Technology
+  - How To
+  - Termux
+tags:
+  - Termux
+  - Phone
+  - Localhost
+  - Tool
+series:
+  - Termux
 usemathjax: false
 ---
 
