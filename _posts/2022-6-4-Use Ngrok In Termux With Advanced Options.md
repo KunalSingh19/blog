@@ -36,26 +36,29 @@ Tunnel is a bash based script which is made for ngrok users of termux from this 
 
 ## INSTALLATION [Termux] :
 
-* `apt-get update -y`
-* `apt-get upgrade -y`
-* `pkg install python -y`
-* `pkg install python2 -y`
-* `pkg install git -y`
-* `pip install lolcat`
-* `git clone https://github.com/noob-hackers/tunnel`
-* `cd $HOME`
-* `ls`
-* `cd tunnel`
-* `ls`
-* `bash tunnel.sh`
+```bash
+apt-get update -y
+apt-get upgrade -y
+pkg install python -y
+pkg install python2 -y
+pkg install git -y
+pip install lolcat
+git clone https://github.com/noob-hackers/tunnel
+cd $HOME
+ls
+cd tunnel
+ls
+bash tunnel.sh
+```
+
 ```
 [+]-- Now you need internet connection to continue further process...
 
 [+]-- You can select any option by clicking on your keyboard
 
 [+]-- Note:- Don't delete any of the scripts included in core files
-
 ```
+
 ## USAGE OPTIONS [Termux] :
 
 __INSTALL NGROK__ :
@@ -97,19 +100,6 @@ __EXIT__ :
 ## WATCH VIDEO [Termux]
 
 [![des](https://user-images.githubusercontent.com/49580304/96466915-3c2ea080-11df-11eb-8328-100ca165c12c.jpg)](https://rebrand.ly/rcentvideo)
-
-## CONNECT WITH OWNER :
-
-[![Messenger](https://img.shields.io/badge/Chat-Messenger-blue?style=for-the-badge&logo=messenger)](https://rebrand.ly/fbmsnger)
-<a href="https://rebrand.ly/githubprof"><img title="Github" src="https://img.shields.io/badge/noob-hackers-brightgreen?style=for-the-badge&logo=github"></a>
-[![Instagram](https://img.shields.io/badge/INSTAGRAM-FOLLOW-red?style=for-the-badge&logo=instagram)](https://rebrand.ly/insgrm)
-[![Instagram](https://img.shields.io/badge/WEBSITE-VISIT-yellow?style=for-the-badge&logo=blogger)](https://rebrand.ly/noobwebs)
-[![Instagram](https://img.shields.io/badge/LINKEDIN-CONNECT-red?style=for-the-badge&logo=linkedin)](https://rebrand.ly/linkedinprof)
-[![Instagram](https://img.shields.io/badge/FACEBOOK-LIKE-red?style=for-the-badge&logo=facebook)](https://rebrand.ly/fsbpage)
-[![Instagram](https://img.shields.io/badge/TELEGRAM-CHANNEL-red?style=for-the-badge&logo=telegram)](https://rebrand.ly/telegramchnl)
-[![Instagram](https://img.shields.io/badge/WHATSAPP-JOINGROUP-red?style=for-the-badge&logo=whatsapp)](https://rebrand.ly/hckrgroups)
-[![Instagram](https://img.shields.io/badge/DISCUSSION-FORUM-blue?style=for-the-badge&logo=forum)](https://rebrand.ly/nhforums)
-<a href="https://rebrand.ly/noobhackers"><img title="YouTube" src="https://img.shields.io/badge/YouTube-Noob Hackers-red?style=for-the-badge&logo=Youtube"></a>
 
 
 ## WARNING : 
