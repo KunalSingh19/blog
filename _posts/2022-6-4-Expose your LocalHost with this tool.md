@@ -35,12 +35,12 @@ apt update ; apt install git -y ; git clone git://github.com/htr-tech/host.git ;
 ```
 <br>
 <p align="center">
-<img src="https://raw.githubusercontent.com/htr-tech/release-download/master/images/host.png"/> <br>
+<img src="https://raw.githubusercontent.com/htr-tech/release-download/master/images/host.png"/> </p>
 
 ## Features : 
 
 [+] 2 Port Forwarding Options !
-[+] Easy for Beginners ! <br>
+[+] Easy for Beginners !
 
 ## Tunelling Options :
 
