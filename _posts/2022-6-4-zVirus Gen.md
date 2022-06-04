@@ -1,4 +1,3 @@
-
 ---
 title: zVirus Gen
 desc: For Those who don't know how to use VCRT. You can automatically generate a virus.
@@ -7,6 +6,7 @@ category: Termux
 keywords: termux
 usemathjax: false
 ---
+
 For Those who don't know how to use VCRT. You can automatically generate a virus.
 
 ## Features
