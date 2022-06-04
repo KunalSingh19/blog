@@ -1,8 +1,17 @@
 ---
 layout: post
 title:  "Termux Desktop"
-category: Termux
-keywords: termux
+categories:
+  - Technology
+  - How To
+  - Termux
+tags:
+  - Termux
+  - GUI
+  - Music
+  - Audio
+series:
+  - Termux
 usemathjax: false
 ---
 ![logo](https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/logo.png) <br />
