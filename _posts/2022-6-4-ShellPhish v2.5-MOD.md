@@ -2,8 +2,17 @@
 title: ShellPhish v2.5-MOD
 desc: Phishing Tool for Facebook, Instagram, Google, Microsoft, Netflix, PayPal, Steam, Twitter, PlayStation, GitHub, Twitch, Pinterest, Snapchat, Linkedin, Ebay, Dropbox, Protonmail, Spotify, Reddit, Adobe, DeviantArt, Badoo, Origin, CryptoCoin, Yahoo, Wordpress, Yandex, StachoverFlow & VK. This is a modified version of ShellFish, ShellPhish & Zphisher.
 layout: post
-category: Termux
-keywords: termux
+categories:
+  - Technology
+  - How To
+  - Termux
+tags:
+  - Termux
+  - Phone
+  - Tool
+  - Hack
+series:
+  - Termux
 usemathjax: false
 ---
 
