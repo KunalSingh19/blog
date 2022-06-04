@@ -1,4 +1,3 @@
-
 ---
 title: Instagram Hack
 desc: instahack is a bash based script which is officially made to test password strength of instagram account from termux with bruteforce attack and. This tool works on both rooted Android device and Non-rooted Android device.
@@ -76,6 +75,7 @@ $ sudo pip3 install stem
 ```
 
 ## INSTALLATION [Termux] :
+
 ```bash
  apt-get update -y
  apt-get upgrade -y
@@ -89,21 +89,18 @@ $ sudo pip3 install stem
  bash setup_env.sh
  bash instahack.sh
 ```
+
 --------------------------------------------------
     Configuring Tor server to open control port
 --------------------------------------------------
 
 open your **tor configuration** file usually located at **/etc/tor/torrc**
 
-
-::
- 
+```bash
  $ sudo vim /etc/tor/torrc # open it with your text editor
- 
+```
 
 **search** for the file for this **specific section**
-
-::
 
  ## The port on which Tor will listen for local connections from Tor
  ## controller applications, as documented in control-spec.txt.
@@ -115,13 +112,11 @@ open your **tor configuration** file usually located at **/etc/tor/torrc**
 
 ```
 [+]--Now you need internet connection to continue further process...
-
 [+]--You can select any option by clicking on your keyboard
-
 [+]--Note:- Don't delete any of the scripts included in core files
-
 [+]--new session and start TOR (tor) before starting the attack
 ```
+
 ## USAGE OPTIONS [Termux] :
 
 __INFORMATION GATHERING__ :
@@ -146,24 +141,9 @@ __EXIT__ :
 
 <br>
 <p align="center">
-<img width="50%" src="https://raw.githubusercontent.com/evildevill/instahack/master/assets/Screenshot_20220323_221439.jpg"/>
-<img width="45%" src="https://github.com/evildevill/instahack/blob/master/assets/Screenshot_20210920_062617.jpg"/>
+<img width="75%" src="https://raw.githubusercontent.com/evildevill/instahack/master/assets/Screenshot_20220323_221439.jpg"/> <br>
+<img width="75%" src="https://github.com/evildevill/instahack/blob/master/assets/Screenshot_20210920_062617.jpg"/>
 </p>
-
-
-
-## CONNECT The Owner :
-
-[![Messenger](https://img.shields.io/badge/Chat-Messenger-blue?style=for-the-badge&logo=messenger)](https://m.me/hackerwasiii)
-<a href="https://github.com/evildevill"><img title="Github" src="https://img.shields.io/badge/evildevill-brightgreen?style=for-the-badge&logo=github"></a>
-[![Instagram](https://img.shields.io/badge/INSTAGRAM-FOLLOW-red?style=for-the-badge&logo=instagram)](https://instagram.com/blckspidr)
-[![Instagram](https://img.shields.io/badge/WEBSITE-VISIT-yellow?style=for-the-badge&logo=blogger)](https://hackerwasii.blogspot.com)
-[![Instagram](https://img.shields.io/badge/LINKEDIN-CONNECT-red?style=for-the-badge&logo=linkedin)](https://linkedin/hackerwasii)
-[![Instagram](https://img.shields.io/badge/FACEBOOK-LIKE-red?style=for-the-badge&logo=facebook)](https://facebook.com/StanicDevil)
-[![Instagram](https://img.shields.io/badge/TELEGRAM-CHANNEL-red?style=for-the-badge&logo=telegram)](https://t.me/blckspidr)
-[![Instagram](https://img.shields.io/badge/WHATSAPP-JOINGROUP-red?style=for-the-badge&logo=whatsapp)](https://wa.me/923137119351)
-<a href="https://youtube.com/HackerWasii"><img title="YouTube" src="https://img.shields.io/badge/YouTube-Hacker wasi-red?style=for-the-badge&logo=Youtube"></a>
-
 
 ## WARNING : 
 ***This tool is only for educational purpose. If you use this tool for other purposes except education we will not be responsible in such cases.***
