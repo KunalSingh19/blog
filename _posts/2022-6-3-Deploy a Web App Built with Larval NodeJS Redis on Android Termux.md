@@ -1,8 +1,17 @@
 ---
 layout: post
 title:  "Deploy a Web App Built with Larval NodeJS Redis on Android Termux"
-category: Termux
-keywords: termux
+categories:
+  - Technology
+  - How To
+  - Termux
+tags:
+  - Termux
+  - Phone
+  - NodeJS
+  - Code
+series:
+  - Termux
 usemathjax: false
 ---
 
