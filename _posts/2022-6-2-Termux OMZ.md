@@ -1,9 +1,17 @@
 ---
 layout: post
 title:  "Termux OMZ"
-subtitle: "Simple script to install **[oh-my-zsh](https://ohmyz.sh)** in **[Termux](https://termux.com)**."
-category: Termux
-keywords: termux
+subtitle: "Simple script to install oh-my-zsh in Termux."
+categories:
+  - Technology
+  - How To
+  - Termux
+tags:
+  - Termux
+  - oh-my-zsh
+  - OMZ
+series:
+  - Termux
 usemathjax: false
 ---
 # Termux OMZ
