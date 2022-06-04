@@ -2,9 +2,17 @@
 layout: post
 title:  "Termux Style"
 subtitle: "Simple script to change color-schemes and fonts for Termux."
-category: Termux
+categories:
+  - Technology
+  - How To
+  - Termux
+tags:
+  - Termux
+  - Phone
+  - Theme
+series:
+  - Termux
 thumbnail: "https://raw.githubusercontent.com/adi1090x/termux-style/master/images/main.gif"
-keywords: termux
 usemathjax: false
 ---
 # Termux Style
