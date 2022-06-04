@@ -8,7 +8,7 @@ usemathjax: false
 ---
 
 <p align="center">
-<a href="https://github.com/evildevill/instahack"><img title="instahack" width="50%" src="https://github.com/evildevill/instahack/blob/master/assets/20210219_144319.jpg"></a>
+<a href="https://github.com/evildevill/instahack"><img title="instahack" width="50%" src="https://raw.githubusercontent.com/evildevill/instahack/master/assets/20210219_144319.jpg"></a>
 </p>
 
 ## ABOUT TOOL :
@@ -142,7 +142,7 @@ __EXIT__ :
 <br>
 <p align="center">
 <img width="75%" src="https://raw.githubusercontent.com/evildevill/instahack/master/assets/Screenshot_20220323_221439.jpg"/> <br>
-<img width="75%" src="https://github.com/evildevill/instahack/blob/master/assets/Screenshot_20210920_062617.jpg"/>
+<img width="75%" src="https://raw.githubusercontent.com/evildevill/instahack/master/assets/Screenshot_20210920_062617.jpg"/>
 </p>
 
 ## WARNING : 
