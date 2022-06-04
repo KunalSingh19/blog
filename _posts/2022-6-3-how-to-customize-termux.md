@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "How to Customize Termux" # Title of the blog post.
 description: "How to customize termux,change color schemes and fonts.description." # Description used for search engine.
 featured: true # Sets if post is a featured post, making it appear on the sidebar. A featured post won't be listed on the sidebar if it's the current page
