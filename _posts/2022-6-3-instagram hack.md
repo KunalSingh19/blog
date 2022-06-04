@@ -2,8 +2,17 @@
 title: Instagram Hack
 desc: instahack is a bash based script which is officially made to test password strength of instagram account from termux with bruteforce attack and. This tool works on both rooted Android device and Non-rooted Android device.
 layout: post
-category: Termux
-keywords: termux
+categories:
+  - Technology
+  - How To
+  - Termux
+tags:
+  - Termux
+  - Phone
+  - Instagram
+  - Hack
+series:
+  - Termux
 usemathjax: false
 ---
 
