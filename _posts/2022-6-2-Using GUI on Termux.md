@@ -1,8 +1,17 @@
 ---
 layout: post
 title:  "Using GUI on termux"
-category: Termux
-keywords: termux
+categories:
+  - Technology
+  - How To
+  - Termux
+tags:
+  - Termux
+  - Phone
+  - GUI
+  - VNC
+series:
+  - Termux
 usemathjax: false
 ---
 
