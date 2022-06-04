@@ -1,8 +1,16 @@
 ---
 layout: post
 title:  "Termux T-Header"
-category: Termux
-keywords: termux
+categories:
+  - Technology
+  - How To
+  - Termux
+tags:
+  - Termux
+  - Phone
+  - Style
+series:
+  - Termux
 usemathjax: false
 ---
 # T-Header script
