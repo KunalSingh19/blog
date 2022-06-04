@@ -16,6 +16,7 @@ tags:
   - Audio
 series:
   - Termux
+layout: post
 ---
 
 <br/>
