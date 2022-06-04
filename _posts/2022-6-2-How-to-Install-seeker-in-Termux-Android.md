@@ -1,9 +1,18 @@
 ---
 title: Seeker - Find Geolocation with High Accuracy
-desc:     Concept behind Seeker is simple, just like we host phishing pages to get credentials why not host a fake page that requests your loction just like many popular location based websites
+desc: Concept behind Seeker is simple, just like we host phishing pages to get credentials why not host a fake page that requests your loction just like many popular location based websites
 layout: post
-category: Termux
-keywords: termux
+categories:
+  - Technology
+  - How To
+  - Termux
+tags:
+  - Termux
+  - Tool
+  - Seeker
+  - location
+series:
+  - Termux
 usemathjax: false
 ---
 <h3 class="cyan-text">Seeker - Find Geolocation with High Accuracy</h3>
