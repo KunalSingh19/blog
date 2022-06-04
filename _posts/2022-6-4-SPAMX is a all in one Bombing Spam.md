@@ -2,8 +2,17 @@
 title: 
 desc: SPAMX is a all in one Bombing+Spam tool from this tool you can send anonymous messages to your target without showing your real number and without root. This tool works on both rooted Android device and Non-rooted Android device.
 layout: post
-category: Termux
-keywords: termux
+categories:
+  - Technology
+  - How To
+  - Termux
+tags:
+  - Termux
+  - Phone
+  - Spam
+  - Bombing
+series:
+  - Termux
 usemathjax: false
 ---
 
