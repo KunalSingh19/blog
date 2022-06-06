@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Termux Desktop | KunalSingh19</title>
+<meta name="generator" content="Jekyll v4.2.2">
+<meta property="og:title" content="Termux Desktop">
+<meta name="author" content="KunalSingh19">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+<link rel="canonical" href="https://kunal.is-a-good.dev/posts/Termux-Desktop.html">
+<meta property="og:url" content="https://kunal.is-a-good.dev/posts/Termux-Desktop.html">
+<meta property="og:site_name" content="KunalSingh19">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-06-02T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Termux Desktop">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"KunalSingh19"},"dateModified":"2022-06-02T00:00:00+00:00","datePublished":"2022-06-02T00:00:00+00:00","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Termux Desktop","mainEntityOfPage":{"@type":"WebPage","@id":"https://kunal.is-a-good.dev/posts/Termux-Desktop.html"},"url":"https://kunal.is-a-good.dev/posts/Termux-Desktop.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/button.css">
+  <script src="/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="https://kunal.is-a-good.dev/feed.xml" title="KunalSingh19">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner">
+<span class="site-brand"><a class="site-brand-inner" rel="author" href="/">
+  <img class="site-favicon" title="KunalSingh19" src="" onerror="this.style.display='none'">
+  KunalSingh19
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+<a class="page-link" href="/about.html">ABOUT</a><a class="page-link" href="/archives.html">ARCHIVES</a><a class="page-link" href="/categories.html">CATEGORIES</a><a class="page-link" href="/">HOME</a><a class="page-link" href="/tags.html">TAGS</a>
+
+
+
+
+
+
+
+
+
+<span class="page-link">
+
+
+
+<div id="google_translate_element" style="display: none;">
+</div>
+
+<span class="ct-language">
+  <ul class="list-unstyled ct-language-dropdown">
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="en">
+          
+          <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" title="English">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="fr">
+          
+          <img src="https://cdn.countryflags.com/thumbs/france/flag-400.png" title="French">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="zh-CN">
+          
+          <img src="https://cdn.countryflags.com/thumbs/china/flag-400.png" title="Chinese(Simple)">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ja">
+          
+          <img src="https://cdn.countryflags.com/thumbs/japan/flag-400.png" title="Japanese">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ko">
+          
+          <img src="https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" title="Korean">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ru">
+          
+          <img src="https://cdn.countryflags.com/thumbs/russia/flag-400.png" title="Russian">
+          
+        </a>
+      </li>
+    
+  </ul>
+</span>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+  }, 'google_translate_element');
+
+  // Links to cross-origin destinations are unsafe
+  var gll = document.getElementsByClassName('goog-logo-link')[0];
+  if (gll) {
+    gll.setAttribute('rel', 'noopener');
+  }
+
+  function restoreLang() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore_el = innerDoc.getElementsByTagName("button");
+
+    for (var i = 0; i < restore_el.length; i++) {
+      if (restore_el[i].id.indexOf("restore") >= 0) {
+        restore_el[i].click();
+        var close_el = innerDoc.getElementsByClassName("goog-close-link");
+        close_el[0].click();
+        return;
+      }
+    }
+  }
+
+  function triggerHtmlEvent(element, eventName) {
+    var event;
+    if (document.createEvent) {
+      event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, true, true);
+      element.dispatchEvent(event);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+      element.fireEvent('on' + event.eventType, event);
+    }
+  }
+
+  var googleCombo = document.querySelector("select.goog-te-combo");
+  var langSelect = document.querySelector('.ct-language');
+  langSelect.addEventListener('click', function(event) {
+    if (!event.target) {
+      return;
+    }
+
+    var selected = document.querySelector('.ct-language .ct-language-selected');
+    if (selected) {
+      selected.classList.remove('ct-language-selected');
+    }
+
+    var target = event.target;
+    while (target && target !== langSelect ) {
+      if (target.matches('.lang-select')) {
+        break;
+      }
+      target = target.parentElement;
+    }
+
+    if (target && target.matches('.lang-select')) {
+      var lang = target.getAttribute('data-lang');
+      if (googleCombo.value == lang) {
+        restoreLang();
+      } else {
+        target.parentElement.classList.add('ct-language-selected');
+        googleCombo.value = lang;
+        triggerHtmlEvent(googleCombo, 'change');
+      }
+    }
+
+    event.preventDefault();
+  });
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</span>
+</div>
+        </nav>
+</div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<div id="click-to-top" class="click-to-top">
+  <i class="fa fa-arrow-up"></i>
+</div>
+<script>
+  (function () {
+    const clickToTop = document.getElementById('click-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        clickToTop.classList.add('show')
+      }else {
+        clickToTop.classList.remove('show')
+      }
+    });
+    clickToTop.addEventListener('click', () => {
+      window.smoothScrollTo(0);
+    });
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">Termux Desktop</h1>
+  <h2 class="post-subtitle"></h2>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2022-06-02T00:00:00+00:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Jun 02, 2022
+    </time>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 10 mins</span>
+  </p>
+<div class="post-tags">
+<a class="post-tag" href="/tags.html#Termux">#Termux</a><a class="post-tag" href="/tags.html#GUI">#GUI</a><a class="post-tag" href="/tags.html#Music">#Music</a><a class="post-tag" href="/tags.html#Audio">#Audio</a>
+</div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <p><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/logo.png" alt="logo"> <br></p>
+
+<p>Alright, Lets just get this straight, these are just some <strong>dotfiles</strong> &amp; <strong>scripts</strong>, which will help you to setup a graphical environment in <strong>termux</strong>. I’ve tried to make it <em>as easy as possible</em> to setup a beautiful <strong><em>linux desktop on your android device</em></strong> with termux, So follow the steps and you’ll end up making it look like this - <br></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Openbox WM</th>
+      <th>Another Style</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/main_1.png" alt="desktop"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/main_2.png" alt="desktop"></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Lets start from the beginning… <br></p>
+
+<h3 id="what-is-termux">What is termux?</h3>
+
+<p>Termux is an <em>Android terminal emulator</em> and <strong>Linux environment</strong> app that works directly with <strong>no rooting</strong> or setup required. A minimal base system is installed automatically - additional packages are available using the <em>PKG/APT package manager</em>. More <a href="https://termux.com/">Here</a>… <br></p>
+
+<h3 id="how-to-install-termux">How To install termux?</h3>
+
+<p>You can install termux form google play store or from f-droid. <br></p>
+
+<ul>
+  <li>Get it on <a href="https://play.google.com/store/apps/details?id=com.termux">Google Play</a>
+</li>
+  <li>Download from <a href="https://f-droid.org/packages/com.termux/">F-Droid</a> <br>
+</li>
+</ul>
+
+<p>More information about installation is <a href="https://wiki.termux.com/wiki/Main_Page">here</a> <br></p>
+
+<h3 id="preparation">Preparation</h3>
+
+<p>Install <code class="language-plaintext highlighter-rouge">Termux</code> &amp; <code class="language-plaintext highlighter-rouge">Termux:API</code> on your phone. It’s recommended to install <em>Termux API</em> application as many desktop elements are dependent on it.</p>
+
+<blockquote>
+  <p>This setup is created and tested on :</p>
+
+  <p>Device - <strong>Redmi Note 9 Pro</strong> <br>
+Android - <strong>Android 10 (Q)</strong> <br>
+CPU Type - <strong>aarch64</strong></p>
+</blockquote>
+
+<h3 id="installation">Installation</h3>
+
+<p>After installing both applications above, open <code class="language-plaintext highlighter-rouge">Termux</code> and follow the steps below -</p>
+
+<ul>
+  <li>Update termux packages and install <code class="language-plaintext highlighter-rouge">git</code>
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>pkg upgrade &amp;&amp; pkg install git
+</code></pre></div>    </div>
+  </li>
+  <li>Clone this repository
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>git clone --depth=1 https://github.com/adi1090x/termux-desktop.git
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<blockquote>
+  <p><strong>Warning</strong> : I’m assuming that you’re doing this on a fresh termux install. If not, I’ll suggest you to do so. However the <code class="language-plaintext highlighter-rouge">setup.sh</code> script backup every file it replace, It’s still recommended that you manually backup your files in order to avoid conflicts. <br></p>
+</blockquote>
+
+<ul>
+  <li>Change to cloned directory and run <code class="language-plaintext highlighter-rouge">setup.sh</code> with <em>–install</em> option
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>cd termux-desktop
+chmod +x setup.sh
+setup.sh --install
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<blockquote>
+  <p>If script <code class="language-plaintext highlighter-rouge">setup.sh</code> fails during package installation (due to network issues), you can re-execute it again.</p>
+</blockquote>
+
+<ul>
+  <li>During installation, you’ll be asked to set up password for <strong>VNC</strong> -
+```
+[*] Setting up VNC Server…</li>
+</ul>
+
+<p>You will require a password to access your desktops.</p>
+
+<p>Password:
+Verify:
+Would you like to enter a view-only password (y/n)? n</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+&gt; Note that passwords are not visible when you are typing them and minimum password length is 6 characters.
+&gt; Remember the password you typed as it'll be required to connect via vnc client.
+- If everything is okay, you will see this message -
+</code></pre></div></div>
+<p>New ‘localhost:1 ()’ desktop is localhost:1</p>
+
+<p>Creating default startup script /data/data/com.termux/files/home/.vnc/xstartup
+Creating default config /data/data/com.termux/files/home/.vnc/config
+Starting applications specified in /data/data/com.termux/files/home/.vnc/xstartup
+Log file is /data/data/com.termux/files/home/.vnc/localhost:1.log</p>
+
+<p>[*] Server Is Running…</p>
+
+<p>TigerVNC server sessions:</p>
+
+<p>X DISPLAY #     PROCESS ID
+:1              XXXXX</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; It means that X (vnc) server is available on display 'localhost:1'. &lt;br /&gt;
+
+That's it. `Termux Desktop` is installed successfully. *Restart Termux* and enter `startdesktop` command to start *vncserver* and connect via VNC Client. &lt;br /&gt;
+</code></pre></div></div>
+<p>startdesktop</p>
+
+<p>[*] Starting VNC Server…</p>
+
+<p>New ‘localhost:1 ()’ desktop is localhost:1</p>
+
+<p>Starting applications specified in /data/data/com.termux/files/home/.vnc/xstartup
+Log file is /data/data/com.termux/files/home/.vnc/localhost:1.log</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+### Uninstallation
+
+If you ever want to uninstall Termux Desktop, just run `setup.sh` with *--uninstall* option. Just keep the `setup.sh` script and delete the cloned repository to save space. I'll create a separate uninstaller script later. The command below will remove all the packages and delete all the config files it installed, including the changes you've made. So, Be careful there...
+</code></pre></div></div>
+<p>setup.sh –uninstall</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+***VNC Client***
+
+Now you need a VNC client app to connect to server. I'm using this Android VNC client: [VNC Viewer](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android). You can use [TigerVNC](https://tigervnc.org/) if you're trying to connect to server by a computer (Windows or Linux).
+
+Determine port number on which VNC server listens. It can be calculated like this: 5900 + {display number}. So for display 'localhost:1' the port will be 5901. &lt;br /&gt;
+
+Now open the VNC Viewer application and create a new connection with the following information (assuming that port is 5901) - &lt;br /&gt;
+</code></pre></div></div>
+<p>Address:
+127.0.0.1:5901</p>
+
+<p>Name:
+Termux
+```
+Now launch it. You will be prompted for <code class="language-plaintext highlighter-rouge">password</code> that you entered during installation. After entering password, you’ll be headed directly to this desktop - <br></p>
+
+<p><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/desk_1.png" alt="desktop"> <br></p>
+
+<h3 id="first-impression">First Impression</h3>
+
+<p>Let’s take a look at following installed programs you’ll get here -</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>File Manager</th>
+      <th>Text Editor/IDE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/desk_2.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/desk_3.png" alt="img"></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Terminal Emulator</th>
+      <th>Web Browser</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/desk_4.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/desk_5.png" alt="img"></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Openbox Menu</th>
+      <th>Many CLI based Programs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/desk_6.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/desk_7.png" alt="img"></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>vim &amp; htop</th>
+      <th>ranger &amp; calcurse</th>
+      <th>mutt &amp; elinks</th>
+      <th>mpd &amp; ncmpcpp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/desk_8.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/desk_9.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/desk_10.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/desk_11.png" alt="img"></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Rofi Application launcher and Applets -</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>App Launcher</th>
+      <th>Music Player</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/rofi_1.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/rofi_2.png" alt="img"></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Battery Status</th>
+      <th>Exit Menu</th>
+      <th>Network Info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/rofi_3.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/rofi_5.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/rofi_4.png" alt="img"></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="styles">Styles</h3>
+
+<p>There are total <em>Eight different styles/themes</em> available in this setup. To change style, <code class="language-plaintext highlighter-rouge">Right click on desktop &gt; Preferences &gt; Change Style</code> and select the one you want to apply.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Default</th>
+      <th>Beach</th>
+      <th>Forest</th>
+      <th>Grid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/style_1.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/style_2.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/style_3.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/style_4.png" alt="img"></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Manhattan</th>
+      <th>Slime</th>
+      <th>Spark</th>
+      <th>Wave</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/style_5.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/style_6.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/style_7.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/style_8.png" alt="img"></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="applications-of-termux-desktop">Applications of <code class="language-plaintext highlighter-rouge">Termux Desktop</code>
+</h3>
+
+<p>Well, These are some ideas or things you can do with termux desktop. From Learning coding to Penetration testing, Chatting over IRC to Browsing web and Downloading file, Playing classic retro games to run Windows from 90s.</p>
+
+<ul>
+  <li>Learn and practice you coding skill without having a laptop</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Python</th>
+      <th>Bash</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/app_1.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/app_2.png" alt="img"></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Chatting, Web Browsing and Downloading files</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hexchat &amp; Pidgin</th>
+      <th>Netsurf &amp; Uget</th>
+      <th>Browsing Wiki</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/app_3.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/app_4.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/app_5.png" alt="img"></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Penetration testing and Learn cyber security stuff</li>
+</ul>
+
+<blockquote>
+  <p>I’m not doing anything <strong>illegal</strong> or sponsoring any kind of <strong>Hacking and Cracking</strong>. <em>Termux is a powerful tool, use it with responsibilities.</em> <br></p>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th>Metasploit - Sherlock - Socialfish - Zphisher - Sqlmap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/app_6.png" alt="img"></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Play classic retro games or Run Microsoft Windows from 90s with <code class="language-plaintext highlighter-rouge">Dosbox</code>
+</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Turbo C++, Windows 1 and Windows 3</th>
+      <th>Duke and Blue Brothers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/app_7.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/app_8.png" alt="img"></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mario and Pacman</th>
+      <th>Prince of Persia (both)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/app_9.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/app_10.png" alt="img"></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Wolfenstein and Turrican2</th>
+      <th>SuperKarts and Spiderman</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/app_11.png" alt="img"></td>
+      <td><img src="https://raw.githubusercontent.com/adi1090x/termux-desktop/master/previews/app_12.png" alt="img"></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You’ll probably get the idea of possible things you can do with Termux and how Termux Desktop makes it more easy.</p>
+
+<h3 id="keybindings">Keybindings</h3>
+
+<p>Here’s some shortcut keys you want to use to speed up your work. For more, <code class="language-plaintext highlighter-rouge">Right click on desktop &gt; Keybinds</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keys</th>
+      <th>Action</th>
+      <th>—–</th>
+      <th>Keys</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">W-1</code></td>
+      <td>Go To Desktop 1</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">S-W-1</code></td>
+      <td>Send To Desktop 1</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">W-2</code></td>
+      <td>Go To Desktop 2</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">S-W-2</code></td>
+      <td>Send To Desktop 2</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">W-3</code></td>
+      <td>Go To Desktop 3</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">S-W-3</code></td>
+      <td>Send To Desktop 3</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">W-4</code></td>
+      <td>Go To Desktop 4</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">S-W-4</code></td>
+      <td>Send To Desktop 4</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">W-5</code></td>
+      <td>Go To Desktop 5</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">S-W-5</code></td>
+      <td>Send To Desktop 5</td>
+    </tr>
+    <tr>
+      <td colspan="6">
+</td>
+      
+      
+      
+      
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">W-S-Left</code></td>
+      <td>Send To Prev Desktop</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">W-S-Right</code></td>
+      <td>Send To Next Desktop</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">A-Tab</code></td>
+      <td>Next Window (Current Workspace)</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">W-Tab</code></td>
+      <td>Next Window (All Workspaces)</td>
+    </tr>
+    <tr>
+      <td colspan="6">
+</td>
+      
+      
+      
+      
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">W-h</code></td>
+      <td>Move to TopLeft</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">W-j</code></td>
+      <td>Move to BottomLeft</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">W-k</code></td>
+      <td>Move to TopRight</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">W-l</code></td>
+      <td>Move to BottomRight</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">W-Left</code></td>
+      <td>Move To Left Edge</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">W-Right</code></td>
+      <td>Move To Right Edge</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">W-Up</code></td>
+      <td>Maximized</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">W-Down</code></td>
+      <td>Unmaximized</td>
+    </tr>
+    <tr>
+      <td colspan="6">
+</td>
+      
+      
+      
+      
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">W-q/c</code></td>
+      <td>Close Windows</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">A-r/m</code></td>
+      <td>Toggle Resize/Move</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">W-Space</code></td>
+      <td>Openbox Menu</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">W-p/A-F1</code></td>
+      <td>App Launcher</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">W-d</code></td>
+      <td>Toggle Desktop</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">W-v</code></td>
+      <td>Set Tasks</td>
+    </tr>
+    <tr>
+      <td colspan="6">
+</td>
+      
+      
+      
+      
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">W-f</code></td>
+      <td>File Manager</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">W-e</code></td>
+      <td>Text Editor</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">W-t/return</code></td>
+      <td>Terminal</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">W-w</code></td>
+      <td>Web Browser</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">W-x</code></td>
+      <td>Exit Menu</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">W-m</code></td>
+      <td>Music Menu</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">W-b</code></td>
+      <td>Battery Menu</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">W-n</code></td>
+      <td>Network Menu</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">C-A-v</code></td>
+      <td>Vim</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">C-A-r</code></td>
+      <td>Ranger</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">C-A-h</code></td>
+      <td>Htop</td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">C-A-n</code></td>
+      <td>Nano</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="additional-tools">Additional Tools</h3>
+
+<p>You can install additional tools for termux, to make it visually look good.</p>
+<ol>
+  <li>
+<a href="https://github.com/adi1090x/termux-omz">Oh my zsh</a>, Setup zsh with <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a> framework. (Already Added in this setup)</li>
+  <li>
+<a href="https://github.com/adi1090x/termux-style">Termux style</a>, Change color and fonts in termux.</li>
+</ol>
+
+<h3 id="fyi">FYI</h3>
+
+<ul>
+  <li>If you face any problem or get any error, you can create an issue &amp; i’ll try to help.</li>
+  <li>Edit <code class="language-plaintext highlighter-rouge">~/.local/bin/email</code> and put your Email ID and Password (Use an App password) to show unread mails on polybar.</li>
+  <li>You may need to edit some config files accoring to your need (<code class="language-plaintext highlighter-rouge">~/.mutt/muttrc</code>, <code class="language-plaintext highlighter-rouge">~/.gitconfig</code>)</li>
+  <li>Don’t Email or DM me to ask how to hack, I ain’t a Hacker.</li>
+  <li>Have Fun, Share this repository with your friends.</li>
+</ul>
+
+
+    </div>
+
+</article>
+<div class="post-nav">
+<a class="previous" href="/posts/How-to-Install-seeker-in-Termux-Android.html" title="Seeker - Find Geolocation with High Accuracy">Seeker - Find Geolocation with High...</a><a class="next" href="/posts/Termux-OMZ.html" title="Termux OMZ">Termux OMZ</a>
+</div>
+<div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/posts/2022-04-11-APK-Termux-Guru-(2022)-Termux-Commands-and-Tools-Application-by-Bhai4You.html" title="Termux OMZ"></a></li>
+<li><a class="post-link" href="/posts/how-to-customize-termux.html" title="Termux OMZ">How to Customize Termux</a></li>
+<li><a class="post-link" href="/posts/How-to-Access-Darkweb-without-TOR.html" title="Termux OMZ">How to Access Darkweb without TOR ??</a></li>
+<li><a class="post-link" href="/posts/2022-04-17-Tool-X-Fast-and-Easy-Installation-!!.html" title="Termux OMZ"></a></li>
+</ul>
+    </div>
+<div class="post-comments"></div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+<div>2020-2022 KunalSingh19</div>
+      <div>Made with<a title="KunalSingh19" href="#">Love</a> &amp; <a title="I am Legend." href="https://github.com/KunalSingh19">Github</a>.</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/feed.xml">via RSS</a>
+</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Deploy a Web App Built with Larval NodeJS Redis on Android Termux | KunalSingh19</title>
+<meta name="generator" content="Jekyll v4.2.2">
+<meta property="og:title" content="Deploy a Web App Built with Larval NodeJS Redis on Android Termux">
+<meta name="author" content="KunalSingh19">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Table of Contents">
+<meta property="og:description" content="Table of Contents">
+<link rel="canonical" href="https://kunal.is-a-good.dev/posts/Deploy-a-Web-App-Built-with-Larval-NodeJS-Redis-on-Android-Termux.html">
+<meta property="og:url" content="https://kunal.is-a-good.dev/posts/Deploy-a-Web-App-Built-with-Larval-NodeJS-Redis-on-Android-Termux.html">
+<meta property="og:site_name" content="KunalSingh19">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-06-03T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Deploy a Web App Built with Larval NodeJS Redis on Android Termux">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"KunalSingh19"},"dateModified":"2022-06-03T00:00:00+00:00","datePublished":"2022-06-03T00:00:00+00:00","description":"Table of Contents","headline":"Deploy a Web App Built with Larval NodeJS Redis on Android Termux","mainEntityOfPage":{"@type":"WebPage","@id":"https://kunal.is-a-good.dev/posts/Deploy-a-Web-App-Built-with-Larval-NodeJS-Redis-on-Android-Termux.html"},"url":"https://kunal.is-a-good.dev/posts/Deploy-a-Web-App-Built-with-Larval-NodeJS-Redis-on-Android-Termux.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/button.css">
+  <script src="/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="https://kunal.is-a-good.dev/feed.xml" title="KunalSingh19">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner">
+<span class="site-brand"><a class="site-brand-inner" rel="author" href="/">
+  <img class="site-favicon" title="KunalSingh19" src="" onerror="this.style.display='none'">
+  KunalSingh19
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+<a class="page-link" href="/about.html">ABOUT</a><a class="page-link" href="/archives.html">ARCHIVES</a><a class="page-link" href="/categories.html">CATEGORIES</a><a class="page-link" href="/">HOME</a><a class="page-link" href="/tags.html">TAGS</a>
+
+
+
+
+
+
+
+
+
+<span class="page-link">
+
+
+
+<div id="google_translate_element" style="display: none;">
+</div>
+
+<span class="ct-language">
+  <ul class="list-unstyled ct-language-dropdown">
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="en">
+          
+          <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" title="English">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="fr">
+          
+          <img src="https://cdn.countryflags.com/thumbs/france/flag-400.png" title="French">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="zh-CN">
+          
+          <img src="https://cdn.countryflags.com/thumbs/china/flag-400.png" title="Chinese(Simple)">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ja">
+          
+          <img src="https://cdn.countryflags.com/thumbs/japan/flag-400.png" title="Japanese">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ko">
+          
+          <img src="https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" title="Korean">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ru">
+          
+          <img src="https://cdn.countryflags.com/thumbs/russia/flag-400.png" title="Russian">
+          
+        </a>
+      </li>
+    
+  </ul>
+</span>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+  }, 'google_translate_element');
+
+  // Links to cross-origin destinations are unsafe
+  var gll = document.getElementsByClassName('goog-logo-link')[0];
+  if (gll) {
+    gll.setAttribute('rel', 'noopener');
+  }
+
+  function restoreLang() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore_el = innerDoc.getElementsByTagName("button");
+
+    for (var i = 0; i < restore_el.length; i++) {
+      if (restore_el[i].id.indexOf("restore") >= 0) {
+        restore_el[i].click();
+        var close_el = innerDoc.getElementsByClassName("goog-close-link");
+        close_el[0].click();
+        return;
+      }
+    }
+  }
+
+  function triggerHtmlEvent(element, eventName) {
+    var event;
+    if (document.createEvent) {
+      event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, true, true);
+      element.dispatchEvent(event);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+      element.fireEvent('on' + event.eventType, event);
+    }
+  }
+
+  var googleCombo = document.querySelector("select.goog-te-combo");
+  var langSelect = document.querySelector('.ct-language');
+  langSelect.addEventListener('click', function(event) {
+    if (!event.target) {
+      return;
+    }
+
+    var selected = document.querySelector('.ct-language .ct-language-selected');
+    if (selected) {
+      selected.classList.remove('ct-language-selected');
+    }
+
+    var target = event.target;
+    while (target && target !== langSelect ) {
+      if (target.matches('.lang-select')) {
+        break;
+      }
+      target = target.parentElement;
+    }
+
+    if (target && target.matches('.lang-select')) {
+      var lang = target.getAttribute('data-lang');
+      if (googleCombo.value == lang) {
+        restoreLang();
+      } else {
+        target.parentElement.classList.add('ct-language-selected');
+        googleCombo.value = lang;
+        triggerHtmlEvent(googleCombo, 'change');
+      }
+    }
+
+    event.preventDefault();
+  });
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</span>
+</div>
+        </nav>
+</div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<div id="click-to-top" class="click-to-top">
+  <i class="fa fa-arrow-up"></i>
+</div>
+<script>
+  (function () {
+    const clickToTop = document.getElementById('click-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        clickToTop.classList.add('show')
+      }else {
+        clickToTop.classList.remove('show')
+      }
+    });
+    clickToTop.addEventListener('click', () => {
+      window.smoothScrollTo(0);
+    });
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">Deploy a Web App Built with Larval NodeJS Redis on Android Termux</h1>
+  <h2 class="post-subtitle"></h2>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2022-06-03T00:00:00+00:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Jun 03, 2022
+    </time>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 7 mins</span>
+  </p>
+<div class="post-tags">
+<a class="post-tag" href="/tags.html#Termux">#Termux</a><a class="post-tag" href="/tags.html#Phone">#Phone</a><a class="post-tag" href="/tags.html#NodeJS">#NodeJS</a><a class="post-tag" href="/tags.html#Code">#Code</a>
+</div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <p>Table of Contents</p>
+
+<ul>
+  <li><a href="#the-web-app-to-deploy">The Web App to deploy</a></li>
+  <li><a href="#install-termuxapp">Install termux.app</a></li>
+  <li>
+<a href="#install-packages-in-termux">Install packages in termux</a>
+    <ul>
+      <li><a href="#system-info">System Info</a></li>
+      <li><a href="#utility-packages">Utility packages</a></li>
+      <li>
+<a href="#ssh">SSH</a>
+        <ul>
+          <li><a href="#start-ssh-server">Start SSH server</a></li>
+          <li><a href="#use-puttygenexe-to-generate-key-files">Use puttygen.exe to generate key files</a></li>
+          <li><a href="#add-public-key-to-sshautherizedkeys">Add public key to <code class="language-plaintext highlighter-rouge">~/.ssh/autherized_keys</code></a></li>
+          <li><a href="#use-puttyexe-to-login">Use putty.exe to login</a></li>
+        </ul>
+      </li>
+      <li><a href="#proot">proot</a></li>
+      <li><a href="#git-optional">Git (optional)</a></li>
+      <li><a href="#python-optional">Python (optional)</a></li>
+      <li><a href="#clang-optional">clang (optional)</a></li>
+      <li><a href="#redis">redis</a></li>
+      <li><a href="#nodejs">node.js</a></li>
+      <li><a href="#php">PHP</a></li>
+      <li><a href="#nginx">Nginx</a></li>
+      <li><a href="#php-fpm">php-fpm</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#configuration">Configuration</a>
+    <ul>
+      <li><a href="#update-etcnginxnginxconf">Update <code class="language-plaintext highlighter-rouge">/etc/nginx/nginx.conf</code></a></li>
+      <li><a href="#update-etcphp-fpmdwwwconf">Update <code class="language-plaintext highlighter-rouge">/etc/php-fpm.d/www.conf</code></a></li>
+      <li><a href="#node-modules">node modules</a></li>
+      <li><a href="#laravel">Laravel</a></li>
+      <li><a href="#startup-script">Startup script</a></li>
+    </ul>
+  </li>
+  <li><a href="#visit-the-app">Visit the app</a></li>
+  <li><a href="#references">references</a></li>
+</ul>
+
+<h2 id="the-web-app-to-deploy">The Web App to deploy</h2>
+
+<p>The web app is built with PHP/Laravel, node.js and redis.</p>
+
+<p>The code will be deployed in <code class="language-plaintext highlighter-rouge">$HOME/firstchart</code>.</p>
+
+<p>https://drive.google.com/file/d/1IUFCGSBIXxbmRrx_neX9PDLcM4C_Ctak/view?usp=sharing</p>
+
+<p>https://github.com/maximus1127/neweyechart</p>
+
+<h2 id="install-termuxapp">Install termux.app</h2>
+
+<p>Get and install the APK from Google Play or F-Droid.</p>
+
+<p>You can get the links from the website.</p>
+
+<p>https://termux.com/</p>
+
+<h2 id="install-packages-in-termux">Install packages in termux</h2>
+
+<p>After starting termux app, you can run commands in the terminal.</p>
+
+<h3 id="system-info">System Info</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nb">whoami</span> <span class="c"># the user name in use</span>
+
+ifconfig <span class="c"># find the IP address</span>
+
+</code></pre></div></div>
+
+<p><img src="https://raw.githubusercontent.com/fox000002/blog/5b3425ec4be4f337995905fa80d0c6853eb2c830/termux/images/info.jpg" alt="info"></p>
+
+<h3 id="utility-packages">Utility packages</h3>
+
+<ul>
+  <li>
+    <p>Package <code class="language-plaintext highlighter-rouge">wget</code> and <code class="language-plaintext highlighter-rouge">curl</code> are used to download files from HTTP servers.</p>
+  </li>
+  <li>
+    <p>Package <code class="language-plaintext highlighter-rouge">vim</code> is a editor.</p>
+  </li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pkg <span class="nb">install </span>wget curl vim
+</code></pre></div></div>
+
+<h3 id="ssh">SSH</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pkg <span class="nb">install </span>sshd
+</code></pre></div></div>
+
+<h4 id="start-ssh-server">Start SSH server</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sshd
+</code></pre></div></div>
+
+<p>The SSH server in termux can only be logged in with a key files. Go to https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html and get putty.exe &amp; puttygen.exe.</p>
+
+<ul>
+  <li>putty.exe: a SSH client</li>
+  <li>puttygen.exe: a RSA and DSA key generation utility</li>
+</ul>
+
+<h4 id="use-puttygenexe-to-generate-key-files">Use puttygen.exe to generate key files</h4>
+
+<p><img src="https://raw.githubusercontent.com/fox000002/blog/5b3425ec4be4f337995905fa80d0c6853eb2c830/termux/images/puttygen.png" alt="puttygen.png"></p>
+
+<h4 id="add-public-key-to-sshautherized_keys">Add public key to <code class="language-plaintext highlighter-rouge">~/.ssh/autherized_keys</code>
+</h4>
+
+<p>To move termux.pub to Android, you can host the file on a HTTP or FTP server in local network. Then download it with wget.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget http://192.168.1.106:8000/termux.pub <span class="c"># Use your own address</span>
+</code></pre></div></div>
+
+<p>Just append the content into <code class="language-plaintext highlighter-rouge">~/.ssh/autherized_keys</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat </span>termux.pub <span class="o">&gt;&gt;</span> ~/.ssh/autherized_keys
+</code></pre></div></div>
+
+<h4 id="use-puttyexe-to-login">Use putty.exe to login</h4>
+
+<p><img src="https://raw.githubusercontent.com/fox000002/blog/5b3425ec4be4f337995905fa80d0c6853eb2c830/termux/images/putty_1.png" alt="putty_1.png"></p>
+
+<p><img src="https://raw.githubusercontent.com/fox000002/blog/5b3425ec4be4f337995905fa80d0c6853eb2c830/termux/images/putty_2.png" alt="putty_2.png"></p>
+
+<p><img src="https://raw.githubusercontent.com/fox000002/blog/5b3425ec4be4f337995905fa80d0c6853eb2c830/termux/images/putty_3.png" alt="putty_3.png"></p>
+
+<p><img src="https://raw.githubusercontent.com/fox000002/blog/5b3425ec4be4f337995905fa80d0c6853eb2c830/termux/images/putty_4.png" alt="putty_4.png"></p>
+
+<p><img src="https://raw.githubusercontent.com/fox000002/blog/5b3425ec4be4f337995905fa80d0c6853eb2c830/termux/images/putty_5.png" alt="putty_5.png"></p>
+
+<h3 id="proot">proot</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pkg <span class="nb">install </span>proot <span class="c"># Nginx needs chroot to work</span>
+</code></pre></div></div>
+
+<p>After installing proot, you can use command <code class="language-plaintext highlighter-rouge">termux-chroot</code> to enter simulated root environment.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>termux-chroot
+</code></pre></div></div>
+
+<h3 id="git-optional">Git (optional)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pkg <span class="nb">install </span>git <span class="c"># To get code from Github</span>
+</code></pre></div></div>
+
+<h3 id="python-optional">Python (optional)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pkg <span class="nb">install </span>python2 <span class="c"># To build code when installing node modules </span>
+</code></pre></div></div>
+
+<h3 id="clang-optional">clang (optional)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pkg <span class="nb">install </span>clang <span class="c"># g++ to build code</span>
+</code></pre></div></div>
+
+<h3 id="redis">redis</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pkg <span class="nb">install </span>redis
+</code></pre></div></div>
+
+<h3 id="nodejs">node.js</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pkg <span class="nb">install </span>node
+</code></pre></div></div>
+
+<h3 id="php">PHP</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pkg <span class="nb">install </span>php
+</code></pre></div></div>
+
+<h3 id="nginx">Nginx</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pkg <span class="nb">install </span>nginx
+</code></pre></div></div>
+
+<h3 id="php-fpm">php-fpm</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pkg <span class="nb">install </span>php-fpm
+</code></pre></div></div>
+
+<h2 id="configuration">Configuration</h2>
+
+<h3 id="update-etcnginxnginxconf">Update <code class="language-plaintext highlighter-rouge">/etc/nginx/nginx.conf</code>
+</h3>
+
+<p>You can get the file from <a href="https://github.com/fox000002/blog/blob/master/termux/nginx.conf">nginx.conf</a>.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c">#user  nobody;</span>
+worker_processes  1<span class="p">;</span>
+
+<span class="c">#error_log  logs/error.log;</span>
+<span class="c">#error_log  logs/error.log  notice;</span>
+<span class="c">#error_log  logs/error.log  info;</span>
+
+<span class="c">#pid        logs/nginx.pid;</span>
+
+
+events <span class="o">{</span>
+    worker_connections  1024<span class="p">;</span>
+<span class="o">}</span>
+
+
+http <span class="o">{</span>
+    include       mime.types<span class="p">;</span>
+    default_type  application/octet-stream<span class="p">;</span>
+
+    <span class="c">#log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '</span>
+    <span class="c">#                  '$status $body_bytes_sent "$http_referer" '</span>
+    <span class="c">#                  '"$http_user_agent" "$http_x_forwarded_for"';</span>
+
+    <span class="c">#access_log  logs/access.log  main;</span>
+
+    sendfile        on<span class="p">;</span>
+    <span class="c">#tcp_nopush     on;</span>
+
+    <span class="c">#keepalive_timeout  0;</span>
+    keepalive_timeout  65<span class="p">;</span>
+
+    <span class="c">#gzip  on;</span>
+
+    server <span class="o">{</span>
+        listen       8080<span class="p">;</span>
+        server_name  localhost<span class="p">;</span>
+
+        <span class="c">#charset koi8-r;</span>
+
+        <span class="c">#access_log  logs/host.access.log  main;</span>
+
+    root /data/data/com.termux/files/home/firstchart/public<span class="p">;</span>
+    index index.php index.html index.htm<span class="p">;</span>
+
+    location / <span class="o">{</span>
+        try_files <span class="nv">$uri</span> <span class="nv">$uri</span>/ /index.php?<span class="nv">$query_string</span><span class="p">;</span>
+    <span class="o">}</span>
+
+        <span class="c">#error_page  404              /404.html;</span>
+
+        <span class="c"># redirect server error pages to the static page /50x.html</span>
+        <span class="c">#</span>
+        error_page   500 502 503 504  /50x.html<span class="p">;</span>
+        location <span class="o">=</span> /50x.html <span class="o">{</span>
+            root   /data/data/com.termux/files/usr/share/nginx/html<span class="p">;</span>
+        <span class="o">}</span>
+
+        <span class="c"># proxy the PHP scripts to Apache listening on 127.0.0.1:80</span>
+        <span class="c">#</span>
+        <span class="c">#location ~ \.php$ {</span>
+        <span class="c">#    proxy_pass   http://127.0.0.1;</span>
+        <span class="c">#}</span>
+
+        <span class="c"># pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000</span>
+        <span class="c">#</span>
+    location ~ <span class="se">\.</span>php<span class="nv">$ </span><span class="o">{</span>
+            <span class="c">#root           html;</span>
+            try_files <span class="nv">$uri</span> /index.php <span class="o">=</span>404<span class="p">;</span>
+            fastcgi_split_path_info ^<span class="o">(</span>.+<span class="se">\.</span>php<span class="o">)(</span>/.+<span class="o">)</span><span class="nv">$;</span>
+            fastcgi_pass   127.0.0.1:9000<span class="p">;</span>
+            fastcgi_index  index.php<span class="p">;</span>
+            fastcgi_param  SCRIPT_FILENAME  <span class="nv">$document_root$fastcgi_script_name</span><span class="p">;</span>
+            include        fastcgi_params<span class="p">;</span>
+    <span class="o">}</span>
+
+        <span class="c"># deny access to .htaccess files, if Apache's document root</span>
+        <span class="c"># concurs with nginx's one</span>
+        <span class="c">#</span>
+        <span class="c">#location ~ /\.ht {</span>
+        <span class="c">#    deny  all;</span>
+        <span class="c">#}</span>
+    <span class="o">}</span>
+
+
+    <span class="c"># another virtual host using mix of IP-, name-, and port-based configuration</span>
+    <span class="c">#</span>
+    <span class="c">#server {</span>
+    <span class="c">#    listen       8000;</span>
+    <span class="c">#    listen       somename:8080;</span>
+    <span class="c">#    server_name  somename  alias  another.alias;</span>
+
+    <span class="c">#    location / {</span>
+    <span class="c">#        root   html;</span>
+    <span class="c">#        index  index.html index.htm;</span>
+    <span class="c">#    }</span>
+    <span class="c">#}</span>
+
+
+    <span class="c"># HTTPS server</span>
+    <span class="c">#</span>
+    <span class="c">#server {</span>
+    <span class="c">#    listen       443 ssl;</span>
+    <span class="c">#    server_name  localhost;</span>
+
+    <span class="c">#    ssl_certificate      cert.pem;</span>
+    <span class="c">#    ssl_certificate_key  cert.key;</span>
+
+    <span class="c">#    ssl_session_cache    shared:SSL:1m;</span>
+    <span class="c">#    ssl_session_timeout  5m;</span>
+
+    <span class="c">#    ssl_ciphers  HIGH:!aNULL:!MD5;</span>
+    <span class="c">#    ssl_prefer_server_ciphers  on;</span>
+
+    <span class="c">#    location / {</span>
+    <span class="c">#        root   html;</span>
+    <span class="c">#        index  index.html index.htm;</span>
+    <span class="c">#    }</span>
+    <span class="c">#}</span>
+
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<h3 id="update-etcphp-fpmdwwwconf">Update <code class="language-plaintext highlighter-rouge">/etc/php-fpm.d/www.conf</code>
+</h3>
+
+<p>Edit the <code class="language-plaintext highlighter-rouge">listen</code> address.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>listen <span class="o">=</span> 127.0.0.1
+</code></pre></div></div>
+
+<p>You can also get the file from <a href="https://github.com/fox000002/blog/blob/master/termux/www.conf">www.conf</a>.</p>
+
+<h3 id="node-modules">node modules</h3>
+
+<p>After upload code in <code class="language-plaintext highlighter-rouge">$HOME/firstchart</code>, you need to install the node modules.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> <span class="nv">$HOME</span>/firstchart
+
+npm <span class="nb">install</span> <span class="nt">--production</span>
+
+<span class="c"># or</span>
+
+<span class="nv">NODE_ENV</span><span class="o">=</span>production npm <span class="nb">install</span>
+</code></pre></div></div>
+
+<h3 id="laravel">Laravel</h3>
+
+<p>If the code does contains vendor files, install composer and packages.</p>
+
+<ul>
+  <li>composer</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php <span class="nt">-r</span> <span class="s2">"copy('https://getcomposer.org/installer', 'composer-setup.php');"</span>
+php <span class="nt">-r</span> <span class="s2">"if (hash_file('sha384', 'composer-setup.php') === '93b54496392c062774670ac18b134c3b3a95e5a5e5c8f1a9f115f203b75bf9a129d5daa8ba6a13e2cc8a1da0806388a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"</span>
+php composer-setup.php
+php <span class="nt">-r</span> <span class="s2">"unlink('composer-setup.php');"</span>
+</code></pre></div></div>
+
+<ul>
+  <li>packages</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php composer.phar <span class="nb">install</span>
+</code></pre></div></div>
+
+<h3 id="startup-script">Startup script</h3>
+
+<p>Edit <code class="language-plaintext highlighter-rouge">~/.bashrc</code>. You can also get it from <a href="https://github.com/fox000002/blog/blob/master/termux/.bashrc">.bashrc</a></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># bootstrap</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">"XXX</span><span class="nv">$HOME</span><span class="s2">"</span> <span class="o">=</span> <span class="s2">"XXX/home"</span> <span class="o">]</span>
+<span class="k">then
+  </span><span class="nb">uname</span> <span class="nt">-a</span>
+
+  <span class="c"># redis</span>
+  pgrep redis-server <span class="o">||</span> <span class="o">(</span>redis-server &amp;<span class="o">)</span>
+
+  <span class="c"># node</span>
+  <span class="nb">cd</span> /home/firstchart
+  pgrep node <span class="o">||</span> <span class="o">(</span>node server.js &amp;<span class="o">)</span>
+  <span class="nb">cd</span> /home
+
+  <span class="c"># php-fpm</span>
+  pgrep php-fpm <span class="o">||</span> php-fpm
+
+  <span class="c"># NGINX</span>
+  pgrep nginx <span class="o">||</span> nginx
+<span class="k">else</span>
+  <span class="c"># chroot if not in root environment</span>
+  termux-chroot
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<p>After updating <code class="language-plaintext highlighter-rouge">.bashrc</code>, make it in effect.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> ~/.bashrc
+</code></pre></div></div>
+
+<h2 id="visit-the-app">Visit the app</h2>
+
+<p><img src="https://raw.githubusercontent.com/fox000002/blog/5b3425ec4be4f337995905fa80d0c6853eb2c830/termux/images/app.png" alt="app"></p>
+
+<h2 id="references">references</h2>
+
+<p>[1] https://getcomposer.org/download/</p>
+
+<p>[2] https://www.sitepoint.com/android-elephpant-laravel-android-phone/</p>
+
+
+    </div>
+
+</article>
+<div class="post-nav">
+<a class="previous" href="/posts/Using-GUI-on-Termux.html" title="Using GUI on termux">Using GUI on termux</a><a class="next" href="/posts/T-Header.html" title="Termux T-Header">Termux T-Header</a>
+</div>
+<div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/posts/Termux-OMZ.html" title="Termux T-Header">Termux OMZ</a></li>
+<li><a class="post-link" href="/posts/Ultimate-phishing-tool-in-python.html" title="Termux T-Header">PyPhisher</a></li>
+<li><a class="post-link" href="/posts/how-to-customize-termux.html" title="Termux T-Header">How to Customize Termux</a></li>
+<li><a class="post-link" href="/posts/instagram-hack.html" title="Termux T-Header">Instagram Hack</a></li>
+</ul>
+    </div>
+<div class="post-comments"></div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+<div>2020-2022 KunalSingh19</div>
+      <div>Made with<a title="KunalSingh19" href="#">Love</a> &amp; <a title="I am Legend." href="https://github.com/KunalSingh19">Github</a>.</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/feed.xml">via RSS</a>
+</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
